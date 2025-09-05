@@ -1,6 +1,7 @@
 package br.edu.ifsp.scl.ads.prdm.sc3039307.havagas
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.scl.ads.prdm.sc3039307.havagas.databinding.ActivityMainBinding
 
@@ -12,6 +13,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(activityMainBinding.root)
+
+        activityMainBinding.phoneCheckBox.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) activityMainBinding.phone.visibility = View.VISIBLE
+            else activityMainBinding.phone.visibility = View.GONE
+        }
+
 
     }
 }
