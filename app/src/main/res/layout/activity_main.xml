@@ -265,7 +265,7 @@
             android:textSize="15sp"
             android:padding="10dp"
             android:layout_margin="10dp"
-            android:text="Deseja receber emails com atualizações de oportunidades?"
+            android:text="@string/receberOportunidadesCheckBox"
             app:layout_constraintTop_toBottomOf="@+id/vagasInteresse"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
