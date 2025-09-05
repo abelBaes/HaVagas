@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">HaVagas</string>
+    <string name="nome_completo">Nome Completo</string>
+    <string name="havagas">HaVagas</string>
+    <string name="email_pessoal">Email Pessoal</string>
+    <string name="check_box_email_text">Deseja Receber Emails com atualizações e oportunidades?</string>
+    <string name="residencialPhoneType">Residencial</string>
+    <string name="comercialPhoneType">Comercial</string>
+    <string name="telephoneHint">Telefone</string>
+    <string name="havePhoneCheckbox">Possui telefone celular?</string>
+    <string name="phoneHint">Telefone Celular</string>
+    <string name="telefone_contato_tv">Telefone Contato</string>
+    <string-array name="sexOptions">
+        <item>Masculino</item>
+        <item>Feminino</item>
+        <item>Prefiro não dizer</item>
+    </string-array>
 </resources>
