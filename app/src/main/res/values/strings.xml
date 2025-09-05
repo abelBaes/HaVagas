@@ -10,6 +10,12 @@
     <string name="havePhoneCheckbox">Possui telefone celular?</string>
     <string name="phoneHint">Telefone Celular</string>
     <string name="telefone_contato_tv">Telefone Contato</string>
+    <string name="anoFormaturaHint">Ano de Formatura</string>
+    <string name="anoConclusaoHint">Ano de Conclusão</string>
+    <string name="instituicaoNomeHint">Nome da Instituição</string>
+    <string name="tituloMonografiaHint">Título de Monografia</string>
+    <string name="orientadorHint">Orientate</string>
+    <string name="vagasInteresseHint">Vagas de Interesse</string>
     <string-array name="sexOptions">
         <item>Masculino</item>
         <item>Feminino</item>

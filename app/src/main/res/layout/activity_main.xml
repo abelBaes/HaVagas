@@ -145,6 +145,131 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/phone"/>
+        
+        <LinearLayout
+            android:id="@+id/fundamentalOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sexOptionsSpinner"
+            android:orientation="vertical">
+            
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/anoFormaturaHint"
+                android:inputType="date"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/graduacaoOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sexOptionsSpinner"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/anoConclusaoHint"
+                android:inputType="date"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/instituicaoNomeHint"
+                android:inputType="text"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mestradoOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sexOptionsSpinner"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/anoConclusaoHint"
+                android:inputType="date"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/instituicaoNomeHint"
+                android:inputType="text"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tituloMonografiaHint"
+                android:inputType="text"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/orientadorHint"
+                android:inputType="textPersonName"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barreiraFormacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="fundamentalOption, graduacaoOption, mestradoOption"/>
+
+        <EditText
+            android:id="@+id/vagasInteresse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:hint="@string/vagasInteresseHint"
+            android:inputType="textMultiLine"
+            android:minLines="4"
+            android:gravity="top"
+            android:scrollbars="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barreiraFormacao"
+            app:layout_constraintBottom_toTopOf="@id/receiveEmailCheckbox"/>
+
+        <CheckBox
+            android:id="@+id/receiveEmailCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:text="Deseja receber emails com atualizações de oportunidades?"
+            app:layout_constraintTop_toBottomOf="@+id/vagasInteresse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 
