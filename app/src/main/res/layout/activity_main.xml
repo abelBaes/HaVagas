@@ -59,7 +59,6 @@
             android:padding="10dp"
             android:text="@string/telefone_contato_tv"
             android:textSize="18sp"
-            android:gravity="center"
             app:layout_constraintBottom_toTopOf="@id/telephoneTypeRadioGroup"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.526"
@@ -136,6 +135,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
+        <TextView
+            android:id="@+id/sexOptionsTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="@string/sexo"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone"
+            app:layout_constraintBottom_toTopOf="@+id/sexOptionsSpinner"/>
+
         <Spinner
             android:id="@+id/sexOptionsSpinner"
             android:layout_width="match_parent"
@@ -145,7 +157,40 @@
             android:entries="@array/sexOptions"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phone"/>
+            app:layout_constraintTop_toBottomOf="@+id/sexOptionsTv"
+            app:layout_constraintBottom_toTopOf="@+id/formacaoOptionsTv"/>
+
+        <TextView
+            android:id="@+id/formacaoOptionsTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="@string/formacaoTextView"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sexOptionsSpinner"
+            app:layout_constraintBottom_toTopOf="@+id/formationOptionsSpinner"/>
+
+        <Spinner
+            android:id="@+id/formationOptionsSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:entries="@array/formationOptions"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/formacaoOptionsTv"
+            app:layout_constraintBottom_toTopOf="@+id/barreiraFormacaoTop"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barreiraFormacaoTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="fundamentalOption, graduacaoOption, mestradoOption"/>
         
         <LinearLayout
             android:id="@+id/fundamentalOption"
@@ -156,7 +201,8 @@
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sexOptionsSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/barreiraFormacaoTop"
+            app:layout_constraintBottom_toTopOf="@+id/barreiraFormacaoBottom"
             android:orientation="vertical">
             
             <EditText
@@ -175,7 +221,8 @@
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sexOptionsSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/barreiraFormacaoTop"
+            app:layout_constraintBottom_toTopOf="@+id/barreiraFormacaoBottom"
             android:orientation="vertical">
 
             <EditText
@@ -203,7 +250,8 @@
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sexOptionsSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/barreiraFormacaoTop"
+            app:layout_constraintBottom_toTopOf="@+id/barreiraFormacaoBottom"
             android:orientation="vertical">
 
             <EditText
@@ -237,7 +285,7 @@
         </LinearLayout>
 
         <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/barreiraFormacao"
+            android:id="@+id/barreiraFormacaoBottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:barrierDirection="bottom"
@@ -256,7 +304,7 @@
             android:scrollbars="vertical"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/barreiraFormacao"
+            app:layout_constraintTop_toBottomOf="@id/barreiraFormacaoBottom"
             app:layout_constraintBottom_toTopOf="@id/receiveEmailCheckbox"/>
 
         <CheckBox
@@ -270,7 +318,7 @@
             app:layout_constraintTop_toBottomOf="@+id/vagasInteresse"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="@+id/sendButton"/>
+            app:layout_constraintBottom_toTopOf="@+id/sendButton"/>
 
         <Button
             android:id="@+id/sendButton"

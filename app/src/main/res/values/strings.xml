@@ -19,9 +19,16 @@
     <string name="receberOportunidadesCheckBox">Deseja receber emails com atualizações de oportunidades?</string>
     <string name="enviarButton">Enviar</string>
     <string name="limparButton">Limpar</string>
+    <string name="sexo">Sexo</string>
+    <string name="formacaoTextView">Formação</string>
     <string-array name="sexOptions">
         <item>Masculino</item>
         <item>Feminino</item>
         <item>Prefiro não dizer</item>
+    </string-array>
+    <string-array name="formationOptions">
+        <item>Fundamental e médio</item>
+        <item>Graduação e especialização</item>
+        <item>Mestrado e doutorado</item>
     </string-array>
 </resources>
