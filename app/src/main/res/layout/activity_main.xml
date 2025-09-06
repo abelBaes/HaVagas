@@ -22,6 +22,19 @@
             android:layout_margin="10dp"
             tools:ignore="MissingConstraints" />
 
+        <TextView
+            android:id="@+id/nomeCompletoTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="@string/nome_completo_tv"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/nomeCompleto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
         <EditText
             android:id="@+id/nomeCompleto"
             android:layout_width="match_parent"
@@ -31,10 +44,23 @@
             android:padding="10dp"
             android:layout_margin="10dp"
             android:autofillHints="name"
+            app:layout_constraintBottom_toTopOf="@+id/emailTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nomeCompletoTv" />
+
+        <TextView
+            android:id="@+id/emailTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="@string/email_para_contatotv"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title" />
+            app:layout_constraintTop_toBottomOf="@+id/nomeCompleto" />
 
         <EditText
             android:id="@+id/email"
@@ -45,7 +71,7 @@
             android:padding="10dp"
             android:layout_margin="10dp"
             android:autofillHints="emailAddress"
-            app:layout_constraintTop_toBottomOf="@+id/nomeCompleto"
+            app:layout_constraintTop_toBottomOf="@+id/emailTv"
             app:layout_constraintBottom_toTopOf="@+id/contactTelephone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -158,7 +184,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sexOptionsTv"
-            app:layout_constraintBottom_toTopOf="@+id/formacaoOptionsTv"/>
+            app:layout_constraintBottom_toTopOf="@+id/dataNascTv"/>
+
+        <TextView
+            android:id="@+id/dataNascTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="@string/data_de_nascimentoTv"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/dataNascEt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sexOptionsSpinner" />
+
+        <EditText
+            android:id="@+id/dataNascEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/data_de_nascimento"
+            android:inputType="date"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:autofillHints="emailAddress"
+            app:layout_constraintTop_toBottomOf="@+id/dataNascTv"
+            app:layout_constraintBottom_toTopOf="@+id/formacaoOptionsTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
         <TextView
             android:id="@+id/formacaoOptionsTv"
@@ -170,7 +224,7 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sexOptionsSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/dataNascEt"
             app:layout_constraintBottom_toTopOf="@+id/formationOptionsSpinner"/>
 
         <Spinner

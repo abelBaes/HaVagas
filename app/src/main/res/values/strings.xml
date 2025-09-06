@@ -21,6 +21,10 @@
     <string name="limparButton">Limpar</string>
     <string name="sexo">Sexo</string>
     <string name="formacaoTextView">Formação</string>
+    <string name="nome_completo_tv">Nome Completo</string>
+    <string name="email_para_contatotv">Email Para Contato</string>
+    <string name="data_de_nascimentoTv">Data de Nascimento</string>
+    <string name="data_de_nascimento">Data de Nascimento</string>
     <string-array name="sexOptions">
         <item>Masculino</item>
         <item>Feminino</item>
