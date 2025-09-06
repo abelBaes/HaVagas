@@ -345,6 +345,19 @@
             app:barrierDirection="bottom"
             app:constraint_referenced_ids="fundamentalOption, graduacaoOption, mestradoOption"/>
 
+        <TextView
+            android:id="@+id/vagasInteresseTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="@string/vegas_de_interesseTv"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barreiraFormacaoBottom"
+            app:layout_constraintBottom_toTopOf="@+id/vagasInteresse"/>
+
         <EditText
             android:id="@+id/vagasInteresse"
             android:layout_width="match_parent"
@@ -358,8 +371,8 @@
             android:scrollbars="vertical"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/barreiraFormacaoBottom"
-            app:layout_constraintBottom_toTopOf="@id/receiveEmailCheckbox"/>
+            app:layout_constraintTop_toBottomOf="@+id/vagasInteresseTv"
+            app:layout_constraintBottom_toTopOf="@+id/receiveEmailCheckbox"/>
 
         <CheckBox
             android:id="@+id/receiveEmailCheckbox"

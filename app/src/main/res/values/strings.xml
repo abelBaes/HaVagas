@@ -25,6 +25,7 @@
     <string name="email_para_contatotv">Email Para Contato</string>
     <string name="data_de_nascimentoTv">Data de Nascimento</string>
     <string name="data_de_nascimento">Data de Nascimento</string>
+    <string name="vegas_de_interesseTv">Vegas de Interesse</string>
     <string-array name="sexOptions">
         <item>Masculino</item>
         <item>Feminino</item>
